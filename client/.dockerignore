@@ -1,0 +1,30 @@
+# Node modules and Next build output
+node_modules
+.next
+out
+
+# Dependency lock files (optional if you want fresh installs)
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Local env files
+.env*
+!.env.production
+
+# Git-related
+.git
+.gitignore
+
+# Editor-specific
+.vscode
+.idea
+*.swp
+
+# Other potential static artifacts
+coverage
