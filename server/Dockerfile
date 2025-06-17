@@ -10,11 +10,11 @@ WORKDIR /app
 COPY . .
 
 # Install system dependencies and Python packages
-RUN apt-get update && \
+RUN pip install --no-cache-dir -r requirements.txt && \
+    apt-get update && \
     apt-get install -y --no-install-recommends nasm binutils && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    pip install --no-cache-dir -r requirements.txt
+    rm -rf /var/lib/apt/lists/*
 
 # Expose the FastAPI port
 EXPOSE 8000
